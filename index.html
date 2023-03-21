@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: lightgoldenrodyellow;
+      }
+      .bgcolor--blue {
+        background-color: lightcyan;
+      }
+      .btn_bggray {
+        background-color: lightgray;
+      }
+      .btns {
+        position: relative;
+        margin: auto;
+        top: 60px;
+        text-align: center;
+        width: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="btns">
+      <button class="btn_toggle">배경 색상 변경_토글</button>
+      <button class="btn_bggray">배경 색상 변경_그레이</button>
+      <button class="btn_reset">배경 색상_리셋</button>
+    </div>
+    <script>
+      // 쿼리셀렉터 사용시 클래스.을 사용
+      const btnToggle = document.querySelector(".btn_toggle");
+      btnToggle.addEventListener("click", function () {
+        document.body.classList.toggle("bgcolor--blue");
+      });
+
+      const btnBgGray = document.querySelector(".btn_bggray");
+      btnBgGray.addEventListener("click", function () {
+        document.body.classList.add("btn_bggray");
+      });
+
+      const btnReset = document.querySelector(".btn_reset");
+      btnReset.addEventListener("click", function () {
+        document.body.classList.remove("bgcolor--blue");
+        document.body.classList.remove("btn_bggray");
+      });
+    </script>
+  </body>
+</html>
